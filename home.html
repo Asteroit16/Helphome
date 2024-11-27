@@ -88,6 +88,17 @@
         <button id="panic-button">¡Activar!</button>
     </main>
 
+    <script>
+    function sendWhatsAppMessage() {
+        const phoneNumber = "573118806387"; // Reemplaza con el número de teléfono con el formato internacional sin signos (+)
+        const message = encodeURIComponent("¡Alerta! Necesito ayuda inmediata."); // Mensaje predefinido
+        const url = `https://wa.me/${phoneNumber}?text=${message}`;
+        
+        // Redirige al usuario al enlace de WhatsApp
+        window.open(url, '_blank');
+    }
+    </script>
+
     <footer class="d-flex justify-content-around">
         <!-- Iconos de Bootstrap para un diseño más elegante -->
         <a href="home.html" class="footer-icon" title="Inicio"><i class="bi bi-house-door-fill"></i></a>
